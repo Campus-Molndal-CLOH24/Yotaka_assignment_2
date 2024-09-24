@@ -22,7 +22,7 @@ namespace Yotaka_assignment_2
             Console.WriteLine("Car doors: " + car.Doors);
 
             // Create a motorcycle using the MotorcycleFactory
-           
+
             var motorcycle = motorcycleFactory.CreateMotorcycle("Harley Davidson", "Sportster", 2019, 5000);
             motorcycle.EngineType = "V-Twin";
             Console.WriteLine(motorcycle);
@@ -33,7 +33,7 @@ namespace Yotaka_assignment_2
             Console.WriteLine("Motorcycle engine type: " + motorcycle.EngineType);
             motorcycle.EngineType = "Inline-4";
             Console.WriteLine("Motorcycle engine type: " + motorcycle.EngineType);
-           
+
         }
     }
     

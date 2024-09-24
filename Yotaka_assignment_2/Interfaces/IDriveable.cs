@@ -9,5 +9,8 @@ namespace Yotaka_assignment_2.Interfaces
     public interface IDriveable
     {
         string Drive();
+        public bool IsEngineOn();
+        public void StartEngine();
+        public void StopEngine();
     }
 }
