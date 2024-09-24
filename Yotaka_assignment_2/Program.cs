@@ -38,7 +38,7 @@ namespace Yotaka_assignment_2
             Console.WriteLine("Motorcycle engine type: " + motorcycle.EngineType);
             */
             IVehicleFactory carFactory = new CarFactory();
-            IVehicle car = carFactory.CreateVehicle("Toyota", "Corolla", 2020);
+            IVehicle car = carFactory.CreateVehicle("Toyota", "Corolla", 2020,1700,5);
             car.StartEngine();
             Console.WriteLine(car.ToString());
         }

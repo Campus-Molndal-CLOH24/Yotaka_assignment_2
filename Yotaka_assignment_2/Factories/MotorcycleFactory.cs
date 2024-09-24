@@ -10,7 +10,7 @@ namespace Yotaka_assignment_2.Factories
 {
     public class MotorcycleFactory : IVehicleFactory
     {
-        public IVehicle CreateVehicle(string brand, string model, int year)
+        public IVehicle CreateVehicle(string brand, string model, int year, double mileage, int doors)
         {
             return new Motorcycle
             {

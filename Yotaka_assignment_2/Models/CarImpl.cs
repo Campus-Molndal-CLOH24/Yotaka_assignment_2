@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Yotaka_assignment_2.Interfaces;
+using Yotaka_assignment_2.Models;
 
 namespace Yotaka_assignment_2.Models
 {
@@ -14,6 +15,7 @@ namespace Yotaka_assignment_2.Models
         public string Model { get; set; }
         public int Year { get; set; }
         public double Mileage { get; set; }
+        public string EngineType { get; set; } // Added to implement ICar
 
         public string Drive()
         {
@@ -31,6 +33,12 @@ namespace Yotaka_assignment_2.Models
         }
 
         public void StopEngine()
+        {
+            throw new NotImplementedException();
+        }
+
+        // Added to implement IVehicle
+        string IVehicle.IsEngineOn()
         {
             throw new NotImplementedException();
         }
