@@ -22,6 +22,11 @@ namespace Yotaka_assignment_2.Models
             return engineOn;
         }
 
+        string IVehicle.IsEngineOn()
+        {
+            return engineOn ? "Engine is on" : "Engine is off";
+        }
+
         public void StartEngine()
         {
             engineOn = true;
@@ -39,10 +44,9 @@ namespace Yotaka_assignment_2.Models
             return "The car is driving.";
         }
 
-        // Explicit implementation for IVehicle interface
-        string IVehicle.IsEngineOn()
+        public override string ToString()
         {
-            return engineOn ? "Engine is on" : "Engine is off";
+            return $"{Year} {Brand} {Model} with {Doors} doors and a {EngineType} engine.";
         }
     }
 }
