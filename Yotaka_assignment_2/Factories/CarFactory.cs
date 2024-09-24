@@ -29,6 +29,9 @@ namespace Yotaka_assignment_2.Factories
             return new CarFactory(band, model, year, mileage, doors);
         }
 
-        
+        public IVehicle CreateVehicle(string model, int year, double mileage)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

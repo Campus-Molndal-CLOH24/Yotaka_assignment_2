@@ -14,7 +14,7 @@ namespace Yotaka_assignment_2.Interfaces
         double Mileage { get; set; }
         
 
-        bool IsEngineOn();
+        string IsEngineOn();
 
         void StartEngine();
 

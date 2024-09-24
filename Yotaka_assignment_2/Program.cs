@@ -1,11 +1,14 @@
 ﻿using Yotaka_assignment_2.Models;
 using Yotaka_assignment_2.Factories;
+using Yotaka_assignment_2.Interfaces;
+
 namespace Yotaka_assignment_2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            /*
             // Instantiate the specific factories
             CarFactory carFactory = new CarFactory();
             MotorcycleFactory motorcycleFactory = new MotorcycleFactory();
@@ -13,7 +16,7 @@ namespace Yotaka_assignment_2
             // Create a car using the CarFactory
             var car = carFactory.CreateCar("Toyota", "Corolla", 2020, 15000, 4);
             Console.WriteLine(car);
-            car.StartEngine();
+            car.StartEngine(); 
             Console.WriteLine("Car engine status: " + (car.IsEngineOn() ? "On" : "Off"));
             car.StopEngine();
             Console.WriteLine("Car engine status: " + (car.IsEngineOn() ? "On" : "Off"));
@@ -33,7 +36,12 @@ namespace Yotaka_assignment_2
             Console.WriteLine("Motorcycle engine type: " + motorcycle.EngineType);
             motorcycle.EngineType = "Inline-4";
             Console.WriteLine("Motorcycle engine type: " + motorcycle.EngineType);
-
+            */
+            Car car = new Car();
+            car.Brand = "Toyota";
+            car.Model = "Corolla";
+            car.StartEngine();
+            Console.WriteLine(car.Brand, car.Model);
         }
     }
     

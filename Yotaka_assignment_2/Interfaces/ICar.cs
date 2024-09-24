@@ -8,15 +8,16 @@ namespace Yotaka_assignment_2.Interfaces
 {
     public interface ICar : IVehicle, IDriveable
     {
-        public int Doors { get; set; }
-        public string EngineType { get; set; }
+        int Doors { get; set; }
+        string EngineType { get; set; }
 
-        public bool IsEngineOn();
-        public void StartEngine();
-        public void StopEngine();
-        public string Drive();
+        bool IsEngineOn();
+        void StartEngine();
+        void StopEngine();
+        string Drive();
     }
-    class Car : ICar
+    
+    class Car : ICar, IVehicle, IDriveable
     {
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -24,24 +25,34 @@ namespace Yotaka_assignment_2.Interfaces
         public double Mileage { get; set; }
         public int Doors { get; set; }
         public string EngineType { get; set; }
+        private bool engineOn;
 
         public bool IsEngineOn()
         {
-            return true;
+            return engineOn;
         }
 
         public void StartEngine()
         {
+            engineOn = true;
             Console.WriteLine("The engine is on.");
         }
 
         public void StopEngine()
         {
+            engineOn = false;
             Console.WriteLine("The engine is off.");
         }
+
         public string Drive()
         {
             return "The car is driving.";
+        }
+
+        // Explicit implementation for IVehicle interface
+        string IVehicle.IsEngineOn()
+        {
+            return engineOn ? "Engine is on" : "Engine is off";
         }
     }
 }
