@@ -35,5 +35,9 @@ namespace Yotaka_assignment_2.Interfaces
             engineOn = false;
             Console.WriteLine("The engine is off.");
         }
+        public override string ToString()
+        {
+            return $"{Year} {Brand} {Model}.";
+        }
     }
 }
