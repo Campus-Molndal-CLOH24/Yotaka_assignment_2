@@ -42,7 +42,12 @@ namespace Yotaka_assignment_2
             IVehicle car = carFactory.CreateCar("Toyota", "Corolla", 2020,1700,5, "XV-100");
             car.StartEngine();
             Console.WriteLine(car.ToString());
-            
+            // test run only motorcycle factory
+            IVehicleFactory motorcycleFactory = new MotorcycleFactory();
+            IVehicle motorcycle = motorcycleFactory.CreateMotorcycle("Harley Davidson", "Sportster", 2019, 5000, "V-Twin");
+            motorcycle.StartEngine();
+            Console.WriteLine(motorcycle.ToString());
+
         }
     }
     

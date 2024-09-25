@@ -12,7 +12,7 @@ namespace Yotaka_assignment_2.Factories
     {
         public IVehicle CreateMotorcycle(string brand, string model, int year, double mileage, string enginetype)
         {
-            return new Motorcycle
+            return new MotorcycleImpl
             {
                 Brand = brand,
                 Model = model,
