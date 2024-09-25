@@ -9,6 +9,9 @@ namespace Yotaka_assignment_2.Interfaces
     public interface IMotorcycle : IVehicle
     {
         string EngineType { get; set; }
-    }
 
+        bool IsEngineOn();
+        void StartEngine();
+        void StopEngine();
+    }
 }

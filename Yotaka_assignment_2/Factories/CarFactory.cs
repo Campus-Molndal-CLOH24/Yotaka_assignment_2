@@ -8,7 +8,7 @@ using Yotaka_assignment_2.Models;
 
 namespace Yotaka_assignment_2.Factories
 {
-    // build mall for cars
+    // build mall for cars to build a car when we call in car implement 
     public class CarFactory : IVehicleFactory
     {
         public IVehicle CreateCar(string brand, string model, int year, double mileage, int doors, string enginetype)
