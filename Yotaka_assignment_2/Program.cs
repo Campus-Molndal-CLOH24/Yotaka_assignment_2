@@ -37,10 +37,12 @@ namespace Yotaka_assignment_2
             motorcycle.EngineType = "Inline-4";
             Console.WriteLine("Motorcycle engine type: " + motorcycle.EngineType);
             */
+            // test run only car factory
             IVehicleFactory carFactory = new CarFactory();
             IVehicle car = carFactory.CreateVehicle("Toyota", "Corolla", 2020,1700,5);
             car.StartEngine();
             Console.WriteLine(car.ToString());
+            
         }
     }
     
