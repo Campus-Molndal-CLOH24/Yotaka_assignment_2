@@ -19,7 +19,7 @@ namespace Yotaka_assignment_2.Models
         private bool engineOn;
         
         //constructor
-        public CarImpl(string band, string Model, int year, double mileage, int doors, string enginetype, bool engineon)
+        public CarImpl(string band, string Model, int year, double mileage, int doors, string enginetype)
         {
             this.Brand = band;
             this.Model = Model;

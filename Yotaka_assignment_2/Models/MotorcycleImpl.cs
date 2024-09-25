@@ -19,14 +19,13 @@ namespace Yotaka_assignment_2.Models
         private bool engineOn;
 
         //constructor
-        public MotorcycleImpl(string brand, string model, int year, double mileage, string engineType, bool engineon)
+        public MotorcycleImpl(string brand, string model, int year, double mileage, string engineType)
         {
             this.Brand = brand;
             this.Model = model;
             this.Year = year;
             this.Mileage = mileage;
             this.EngineType = engineType;
-            this.engineOn = engineon;
         }
 
         //methods
