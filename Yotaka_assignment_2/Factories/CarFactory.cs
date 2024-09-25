@@ -13,15 +13,8 @@ namespace Yotaka_assignment_2.Factories
     {
         public IVehicle CreateCar(string brand, string model, int year, double mileage, int doors, string enginetype)
         {
-            return new CarImpl
-            {
-                Brand = brand,
-                Model = model,
-                Year = year,
-                Mileage = mileage,
-                Doors = doors,
-                EngineType = enginetype
-            };
+            return new CarImpl(brand,model,year,mileage,doors,enginetype);
+            
         }
         // note to myself : i defined it becuase it is required by the interface IVehicleFactory . maybe if user use this method it will throw an exception
         public IVehicle CreateMotorcycle(string brand, string model, int year, double mileage, string enginetype)

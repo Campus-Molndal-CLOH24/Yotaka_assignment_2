@@ -9,7 +9,7 @@ using Yotaka_assignment_2.Models;
 
 namespace Yotaka_assignment_2.Models
 {
-    public class MotorcycleImpl : IMotorcycle
+    public class MotorcycleImpl : IMotorcycle, IVehicle
     {
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -19,13 +19,13 @@ namespace Yotaka_assignment_2.Models
         private bool engineOn;
 
         //constructor
-        public MotorcycleImpl(string brand, string model, int year, double mileage, string engineType)
+        public MotorcycleImpl(string brand, string model, int year, double mileage, string enginetype)
         {
             this.Brand = brand;
             this.Model = model;
             this.Year = year;
             this.Mileage = mileage;
-            this.EngineType = engineType;
+            this.EngineType = enginetype;
         }
 
         //methods
@@ -33,9 +33,10 @@ namespace Yotaka_assignment_2.Models
         {
             return engineOn;
         }
-        string IVehicle.IsEngineOn()
+
+        bool IVehicle.IsEngineOn()
         {
-            return engineOn ? "Engine is on" : "Engine is off";
+            return engineOn;
         }
 
         public void StartEngine()

@@ -12,19 +12,12 @@ namespace Yotaka_assignment_2.Factories
     {
         public IVehicle CreateMotorcycle(string brand, string model, int year, double mileage, string enginetype)
         {
-            return new MotorcycleImpl
-            {
-                Brand = brand,
-                Model = model,
-                Year = year,
-                Mileage = mileage,
-                EngineType = enginetype
-            };
+            return new MotorcycleImpl(brand, model, year, mileage, enginetype);
         }
-        // why we need it : ask chat GPT 
+
         public IVehicle CreateCar(string brand, string model, int year, double mileage, int doors, string enginetype)
         {
-            throw new NotImplementedException("Can not create a car becuase this factory create only motorcycle");
+            throw new NotImplementedException("Can not create a car because this factory creates only motorcycles");
         }
     }
 }
