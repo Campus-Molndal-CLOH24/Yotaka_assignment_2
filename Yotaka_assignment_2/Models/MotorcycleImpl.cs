@@ -64,7 +64,7 @@ namespace Yotaka_assignment_2.Models
 
         public override string ToString()
         {
-            return $"{Year} {Brand} {Model} {EngineType}.";
+            return $"Year : {Year} Brand : {Brand} Model :  {Model} and Engine : {EngineType}.";
         }
     }
 }
