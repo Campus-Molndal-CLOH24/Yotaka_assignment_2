@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Yotaka_assignment_2.Interfaces
 {
-    //base class to be inherited by ICar and IMotorcycle
+    //base class to be inherited to ICar and IMotorcycle
     public interface IVehicle
     {
         string Brand { get; set; }

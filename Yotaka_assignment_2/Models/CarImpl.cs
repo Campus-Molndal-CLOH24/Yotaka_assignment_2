@@ -10,37 +10,45 @@ namespace Yotaka_assignment_2.Models
 {
     public class CarImpl : ICar
     {
-        public int Doors { get; set; }
         public string Brand { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
         public double Mileage { get; set; }
-        public string EngineType { get; set; } // Added to implement ICar
-
-        public string Drive()
-        {
-            throw new NotImplementedException();
-        }
+        public int Doors { get; set; }
+        public string EngineType { get; set; }
+        private bool engineOn;
 
         public bool IsEngineOn()
         {
-            throw new NotImplementedException();
+            return engineOn;
+        }
+
+        string IVehicle.IsEngineOn()
+        {
+            return engineOn ? "Engine is on" : "Engine is off";
         }
 
         public void StartEngine()
         {
-            throw new NotImplementedException();
+            engineOn = true;
+            Console.WriteLine("The engine is on.");
         }
 
         public void StopEngine()
         {
-            throw new NotImplementedException();
+            engineOn = false;
+            Console.WriteLine("The engine is off.");
         }
 
-        // Added to implement IVehicle
-        string IVehicle.IsEngineOn()
+        public string Drive()
         {
-            throw new NotImplementedException();
+            return "The car is driving.";
+        }
+
+        public override string ToString()
+        {
+            return $"{Year} {Brand} {Model} with {Doors} doors and a {EngineType} engine.";
         }
     }
 }
+
