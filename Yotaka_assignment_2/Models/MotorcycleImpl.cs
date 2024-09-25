@@ -18,7 +18,23 @@ namespace Yotaka_assignment_2.Models
         public string EngineType { get; set; }
         private bool engineOn;
 
-        public string IsEngineOn()
+        //constructor
+        public MotorcycleImpl(string brand, string model, int year, double mileage, string engineType, bool engineon)
+        {
+            this.Brand = brand;
+            this.Model = model;
+            this.Year = year;
+            this.Mileage = mileage;
+            this.EngineType = engineType;
+            this.engineOn = engineon;
+        }
+
+        //methods
+        public bool IsEngineOn()
+        {
+            return engineOn;
+        }
+        string IVehicle.IsEngineOn()
         {
             return engineOn ? "Engine is on" : "Engine is off";
         }
@@ -34,9 +50,22 @@ namespace Yotaka_assignment_2.Models
             engineOn = false;
             Console.WriteLine("The engine is off.");
         }
+
+        public string Drive()
+        {
+            if (engineOn)
+            {
+                return "The motorcycle is driving.";
+            }
+            else
+            {
+                return "Start the engine first.";
+            }
+        }
+
         public override string ToString()
         {
-            return $"{Year} {Brand} {Model}.";
+            return $"{Year} {Brand} {Model} {EngineType}.";
         }
     }
 }
