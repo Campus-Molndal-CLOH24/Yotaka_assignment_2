@@ -39,7 +39,7 @@ namespace Yotaka_assignment_2
             */
             // test run only car factory
             IVehicleFactory carFactory = new CarFactory();
-            IVehicle car = carFactory.CreateVehicle("Toyota", "Corolla", 2020,1700,5);
+            IVehicle car = carFactory.CreateCar("Toyota", "Corolla", 2020,1700,5, "XV-100");
             car.StartEngine();
             Console.WriteLine(car.ToString());
             

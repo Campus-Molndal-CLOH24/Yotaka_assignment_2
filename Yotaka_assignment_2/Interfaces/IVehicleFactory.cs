@@ -10,7 +10,7 @@ namespace Yotaka_assignment_2.Interfaces
 {
     public interface IVehicleFactory
     {
-        IVehicle CreateCar(string brand, string model, int year, double mileage, int doors);
-        IVehicle CreateMotorcycle(string brand, string model, int year, double mileage);
+        IVehicle CreateCar(string brand, string model, int year, double mileage, int doors, string enginetype);
+        IVehicle CreateMotorcycle(string brand, string model, int year, double mileage, string enginetype);
     }
 }

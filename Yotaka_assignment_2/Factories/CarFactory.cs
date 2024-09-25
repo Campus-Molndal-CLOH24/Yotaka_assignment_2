@@ -10,19 +10,22 @@ namespace Yotaka_assignment_2.Factories
 {
     public class CarFactory : IVehicleFactory
     {
-        public Car CreateCar(string band, string model, int year, double mileage, int doors)
+        public IVehicle CreateCar(string brand, string model, int year, double mileage, int doors, string enginetype)
         {
             return new Car
             {
-                Brand = band,
+                Brand = brand,
                 Model = model,
                 Year = year,
                 Mileage = mileage,
                 Doors = doors,
-                EngineType = "Petrol"
+                EngineType = enginetype
             };
         }
 
-        
+        public IVehicle CreateMotorcycle(string brand, string model, int year, double mileage, string enginetype)
+        {
+            throw new NotImplementedException("Can not create a motorcycle");
+        }
     }
 }
