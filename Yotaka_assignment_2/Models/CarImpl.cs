@@ -8,7 +8,7 @@ using Yotaka_assignment_2.Models;
 
 namespace Yotaka_assignment_2.Models
 {
-    public class CarImpl : ICar
+    public class CarImpl : ICar, IVehicle, IDriveable
     {
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -17,12 +17,22 @@ namespace Yotaka_assignment_2.Models
         public int Doors { get; set; }
         public string EngineType { get; set; }
         private bool engineOn;
-
+        
+        //constructor
+        public CarImpl(string band, string Model, int year, double mileage, int doors, string enginetype, bool engineon)
+        {
+            this.Brand = band;
+            this.Model = Model;
+            this.Year = year;
+            this.Mileage = mileage;
+            this.Doors = doors;
+            this.EngineType = enginetype; 
+        }
         public bool IsEngineOn()
         {
             return engineOn;
         }
-
+        //ask chatgpt
         string IVehicle.IsEngineOn()
         {
             return engineOn ? "Engine is on" : "Engine is off";

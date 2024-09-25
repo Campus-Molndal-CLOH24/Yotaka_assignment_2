@@ -14,7 +14,6 @@ namespace Yotaka_assignment_2.Interfaces
         int Year { get; set; }
         double Mileage { get; set; }
         
-
         string IsEngineOn();
 
         void StartEngine();

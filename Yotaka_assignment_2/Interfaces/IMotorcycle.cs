@@ -13,5 +13,7 @@ namespace Yotaka_assignment_2.Interfaces
         bool IsEngineOn();
         void StartEngine();
         void StopEngine();
+        string Drive();
+        
     }
 }
