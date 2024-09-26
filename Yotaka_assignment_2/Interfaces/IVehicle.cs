@@ -17,10 +17,9 @@ namespace Yotaka_assignment_2.Interfaces
 
         void StartEngine();
         void StopEngine();
-        
-
         string Drive();
         void Getspeed(int speed);
+        void TrunOnRadio();
 
 
 

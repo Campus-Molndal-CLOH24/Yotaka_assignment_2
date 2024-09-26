@@ -44,11 +44,22 @@ namespace Yotaka_assignment_2.Models
 
         public string Drive()
         {
-            return engineOn ? "Driving...." : "Engine is off";
+            return engineOn ? "Driving...." : "Engine is off , you should start the engine.";
         }
         public void TrunOnRadio()
         {
-            Console.WriteLine("Radio is on");
+            if (engineOn)
+            {
+                Console.WriteLine("The radio is on.");
+            }
+            else
+            {
+                Console.WriteLine("Start the engine first.");
+            }
+        }
+        public void Getspeed(int speed)
+        {
+            Console.WriteLine($"The car is driving at {speed} km/h.");
         }
         public override string ToString()
         {

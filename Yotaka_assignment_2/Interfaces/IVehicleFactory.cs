@@ -8,7 +8,7 @@ using Yotaka_assignment_2.Models;
 
 namespace Yotaka_assignment_2.Interfaces
 {
-    //mallen base class to car and motorcycle factory 
+    //use IVevicle becuase want to focus on the common properties and methods between car, motorcycle and other vehicles.
     public interface IVehicleFactory
     {
         IVehicle CreateCar(string brand, string model, int year, double mileage, int doors, string enginetype);

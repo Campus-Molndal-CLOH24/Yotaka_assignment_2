@@ -60,10 +60,14 @@ namespace Yotaka_assignment_2.Models
             this.Speed = speed;
             Console.WriteLine($"Motorcycle is now going at {speed} km/h.");
         }
+        public void TrunOnRadio()
+        {
+            Console.WriteLine("Radio is on");
+        }
 
         public override string ToString()
         {
-            return $"Year : {Year} Brand : {Brand} Model :  {Model} Spreed : {Speed}and Engine : {EngineType}.";
+            return $"Year : {Year} Brand : {Brand} Model :  {Model} Spreed : {Speed} and Engine : {EngineType}.";
         }
     }
 }

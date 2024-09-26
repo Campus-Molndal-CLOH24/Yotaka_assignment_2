@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Yotaka_assignment_2.Models;
-using Yotaka_assignment_2.Factories;
 
 namespace Yotaka_assignment_2.Interfaces
 {
@@ -15,8 +13,5 @@ namespace Yotaka_assignment_2.Interfaces
         void StartEngine();
         void StopEngine();
         string Drive();
-
-
-        
     }
 }
