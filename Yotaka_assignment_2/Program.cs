@@ -51,6 +51,7 @@ namespace Yotaka_assignment_2
             IVehicle motorcycle = motorcycleFactory.CreateMotorcycle("Harley Davidson", "Sportster", 2019, 5000, "V-Twin");
             motorcycle.StopEngine();
             motorcycle.Getspeed(200);
+            motorcycle.TrunOnRadio();
             Console.WriteLine(motorcycle.ToString());
 
         }

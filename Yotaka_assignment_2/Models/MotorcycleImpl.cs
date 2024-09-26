@@ -36,7 +36,6 @@ namespace Yotaka_assignment_2.Models
             engineOn = true;
             Console.WriteLine("The engine is on.");
         }
-
         public void StopEngine()
         {
             engineOn = false;
@@ -45,29 +44,20 @@ namespace Yotaka_assignment_2.Models
         // i want it will be different from car class so i will return different message
         public string Drive()
         {
-            if (engineOn)
-            {
-                return "The motorcycle is driving.";
-            }
-            else
-            {
-                return "Start the engine first.";
-            }
+            return engineOn ? "Motocycle is driving now" : "You should start engine first";
         }
-
         public void Getspeed(int speed)
         {
-            this.Speed = speed;
+            //this.Speed = speed;
             Console.WriteLine($"Motorcycle is now going at {speed} km/h.");
         }
         public void TrunOnRadio()
         {
-            Console.WriteLine("Radio is on");
+            Console.WriteLine("Sorry, Motorcycle don't has a radio.");
         }
-
         public override string ToString()
         {
-            return $"Year : {Year} Brand : {Brand} Model :  {Model} Spreed : {Speed} and Engine : {EngineType}.";
+            return $"The Motorcycle : Year : {Year} Brand : {Brand} Model :  {Model} Spreed : {Speed} and Engine : {EngineType}.";
         }
     }
 }

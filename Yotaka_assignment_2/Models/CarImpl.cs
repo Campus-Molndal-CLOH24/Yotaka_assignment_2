@@ -29,41 +29,32 @@ namespace Yotaka_assignment_2.Models
             this.EngineType = enginetype; 
         }
         //methods
-     
         public void StartEngine()
         {
             engineOn = true;
             Console.WriteLine("The engine is on.");
         }
-
         public void StopEngine()
         {
             engineOn = false;
             Console.WriteLine("The engine is off.");
         }
-
         public string Drive()
         {
             return engineOn ? "Driving...." : "Engine is off , you should start the engine.";
         }
         public void TrunOnRadio()
         {
-            if (engineOn)
-            {
-                Console.WriteLine("The radio is on.");
-            }
-            else
-            {
-                Console.WriteLine("Start the engine first.");
-            }
+            Console.WriteLine(engineOn ? "The radio is on." : "Start the engine first then radio will trun on.");
         }
         public void Getspeed(int speed)
         {
+            
             Console.WriteLine($"The car is driving at {speed} km/h.");
         }
         public override string ToString()
         {
-            return $"Year : {Year} Brand :{Brand} Model : {Model} with {Doors} doors and a {EngineType} engine.";
+            return $"The Car : Year : {Year} Brand :{Brand} Model : {Model} with {Doors} doors and a {EngineType} engine.";
         }
     }
 }
