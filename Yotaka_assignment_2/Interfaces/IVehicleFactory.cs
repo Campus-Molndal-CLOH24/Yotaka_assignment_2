@@ -11,7 +11,6 @@ namespace Yotaka_assignment_2.Interfaces
     //use IVevicle becuase want to focus on the common properties and methods between car, motorcycle and other vehicles.
     public interface IVehicleFactory
     {
-        IVehicle CreateCar(string brand, string model, int year, double mileage, int doors, string enginetype);
-        IVehicle CreateMotorcycle(string brand, string model, int year, double mileage, string enginetype);
+        IVehicle CreateVehicle(string model, int year, double mileage);
     }
 }

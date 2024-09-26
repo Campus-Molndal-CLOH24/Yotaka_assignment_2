@@ -9,10 +9,10 @@ using Yotaka_assignment_2.Models;
 
 namespace Yotaka_assignment_2.Models
 {
-    public class MotorcycleImpl : IMotorcycle, IVehicle, IDriveable
+    public class MotorcycleImpl : IMotorcycle
     {
         public string Brand { get; set; }
-        public string Model { get; set; }
+        public string Model { get; set; } 
         public int Year { get; set; }
         public double Mileage { get; set; }
         public string EngineType { get; set; }
@@ -27,7 +27,6 @@ namespace Yotaka_assignment_2.Models
             this.Year = year;
             this.Mileage = mileage;
             this.EngineType = enginetype;
-            
         }
 
         //methods
@@ -51,10 +50,7 @@ namespace Yotaka_assignment_2.Models
             //this.Speed = speed;
             Console.WriteLine($"Motorcycle is now going at {speed} km/h.");
         }
-        public void TrunOnRadio()
-        {
-            Console.WriteLine("Sorry, Motorcycle don't has a radio.");
-        }
+
         public override string ToString()
         {
             return $"The Motorcycle : \n" +

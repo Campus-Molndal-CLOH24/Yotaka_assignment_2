@@ -8,7 +8,7 @@ using Yotaka_assignment_2.Models;
 
 namespace Yotaka_assignment_2.Models
 {
-    public class CarImpl : ICar, IVehicle, IDriveable
+    public class CarImpl : ICar
     {
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -49,7 +49,6 @@ namespace Yotaka_assignment_2.Models
         }
         public void Getspeed(int speed)
         {
-            
             Console.WriteLine($"The car is driving at {speed} km/h.");
         }
         public override string ToString()
