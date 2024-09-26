@@ -57,7 +57,12 @@ namespace Yotaka_assignment_2.Models
         }
         public override string ToString()
         {
-            return $"The Motorcycle : Year : {Year} Brand : {Brand} Model :  {Model} Spreed : {Speed} and Engine : {EngineType}.";
+            return $"The Motorcycle : \n" +
+                $"Year : {Year} \n" +
+                $"Brand : {Brand} \n" +
+                $"Model :  {Model} \n" +
+                $"Spreed : {Speed} \n" +
+                $" Engine : {EngineType}.";
         }
     }
 }

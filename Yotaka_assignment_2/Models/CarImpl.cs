@@ -54,7 +54,11 @@ namespace Yotaka_assignment_2.Models
         }
         public override string ToString()
         {
-            return $"The Car : Year : {Year} Brand :{Brand} Model : {Model} with {Doors} doors and a {EngineType} engine.";
+            return $"The Car : \n" +
+                $"Year : {Year} \n" +
+                $"Brand :{Brand} \n" +
+                $"Model : {Model} with {Doors} doors \n " +
+                $"a {EngineType} engine.";
         }
     }
 }
