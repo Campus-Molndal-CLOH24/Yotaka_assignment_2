@@ -1,6 +1,7 @@
 ﻿using Yotaka_assignment_2.Models;
 using Yotaka_assignment_2.Factories;
 using Yotaka_assignment_2.Interfaces;
+using System;
 
 namespace Yotaka_assignment_2
 {
@@ -38,13 +39,13 @@ namespace Yotaka_assignment_2
             Console.WriteLine("Motorcycle engine type: " + motorcycle.EngineType);
             */
             // test run only car factory
-            IVehicleFactory carFactory = new CarFactory();
-            IVehicle car = carFactory.CreateCar("Toyota", "Corolla", 2020,1700,5, "XV-100");
+            CarFactory carFactory = new CarFactory();
+            var car = carFactory.CreateCar("Toyota", "Corolla", 2020,1700,5, "XV-100");
             car.StartEngine();
             Console.WriteLine(car.ToString());
             // test run only motorcycle factory
-            IVehicleFactory motorcycleFactory = new MotorcycleFactory();
-            IVehicle motorcycle = motorcycleFactory.CreateMotorcycle("Harley Davidson", "Sportster", 2019, 5000, "V-Twin");
+            MotorcycleFactory motorcycleFactory = new MotorcycleFactory();
+            var motorcycle = motorcycleFactory.CreateMotorcycle("Harley Davidson", "Sportster", 2019, 5000, "V-Twin");
             motorcycle.StartEngine();
             motorcycle.IsEngineOn();
             Console.WriteLine(motorcycle.ToString());

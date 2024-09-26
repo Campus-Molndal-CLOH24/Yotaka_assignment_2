@@ -8,14 +8,18 @@ using Yotaka_assignment_2.Factories;
 
 namespace Yotaka_assignment_2.Interfaces
 {
-    public interface IMotorcycle : IVehicle
+    public interface IMotorcycle : IVehicle, IDriveable
     {
         string EngineType { get; set; }
 
         bool IsEngineOn();
         void StartEngine();
         void StopEngine();
+        int Getspeed(); // added new methdod to get speed of motorcycle
+
         string Drive();
+
+
         
     }
 }

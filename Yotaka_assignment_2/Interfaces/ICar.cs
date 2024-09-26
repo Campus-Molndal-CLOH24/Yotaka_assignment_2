@@ -12,10 +12,11 @@ namespace Yotaka_assignment_2.Interfaces
         int Doors { get; set; }
         string EngineType { get; set; }
 
-        bool IsEngineOn();
         void StartEngine();
         void StopEngine();
+        
         string Drive();
+        void TrunOnRadio(); // added new method to turn on radio specifi only car
     }
     
 }

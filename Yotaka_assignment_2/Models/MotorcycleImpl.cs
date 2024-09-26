@@ -9,7 +9,7 @@ using Yotaka_assignment_2.Models;
 
 namespace Yotaka_assignment_2.Models
 {
-    public class MotorcycleImpl : IMotorcycle, IVehicle
+    public class MotorcycleImpl : IMotorcycle, IVehicle, IDriveable
     {
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -33,12 +33,6 @@ namespace Yotaka_assignment_2.Models
         {
             return engineOn;
         }
-
-        bool IVehicle.IsEngineOn()
-        {
-            return engineOn;
-        }
-
         public void StartEngine()
         {
             engineOn = true;

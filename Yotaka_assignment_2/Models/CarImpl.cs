@@ -28,16 +28,8 @@ namespace Yotaka_assignment_2.Models
             this.Doors = doors;
             this.EngineType = enginetype; 
         }
-        public bool IsEngineOn()
-        {
-            return engineOn;
-        }
-        //ask chatgpt
-        string IVehicle.IsEngineOn()
-        {
-            return engineOn ? "Engine is on" : "Engine is off";
-        }
-
+        //methods
+     
         public void StartEngine()
         {
             engineOn = true;
@@ -52,9 +44,12 @@ namespace Yotaka_assignment_2.Models
 
         public string Drive()
         {
-            return "The car is driving.";
+            return engineOn ? "Driving...." : "Engine is off";
         }
-
+        public void TrunOnRadio()
+        {
+            Console.WriteLine("Radio is on");
+        }
         public override string ToString()
         {
             return $"Year : {Year} Brand :{Brand} Model : {Model} with {Doors} doors and a {EngineType} engine.";
