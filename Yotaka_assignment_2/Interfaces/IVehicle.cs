@@ -15,6 +15,14 @@ namespace Yotaka_assignment_2.Interfaces
         int Year { get; set; }
         double Mileage { get; set; }
 
+        void StartEngine();
+        void StopEngine();
         
+
+        string Drive();
+        void Getspeed(int speed);
+
+
+
     }
 }

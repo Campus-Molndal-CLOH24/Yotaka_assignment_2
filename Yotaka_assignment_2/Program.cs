@@ -40,14 +40,15 @@ namespace Yotaka_assignment_2
             */
             // test run only car factory
             CarFactory carFactory = new CarFactory();
-            var car = carFactory.CreateCar("Toyota", "Corolla", 2020,1700,5, "XV-100");
+            IVehicle car = carFactory.CreateCar("Toyota", "Corolla", 2020,1700,5, "XV-100");
             car.StartEngine();
             Console.WriteLine(car.ToString());
+
             // test run only motorcycle factory
             MotorcycleFactory motorcycleFactory = new MotorcycleFactory();
-            var motorcycle = motorcycleFactory.CreateMotorcycle("Harley Davidson", "Sportster", 2019, 5000, "V-Twin");
+            IVehicle motorcycle = motorcycleFactory.CreateMotorcycle("Harley Davidson", "Sportster", 2019, 5000, "V-Twin");
             motorcycle.StartEngine();
-            motorcycle.IsEngineOn();
+            motorcycle.Getspeed(200);
             Console.WriteLine(motorcycle.ToString());
 
         }

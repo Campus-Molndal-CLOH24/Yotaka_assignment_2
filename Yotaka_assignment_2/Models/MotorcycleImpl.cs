@@ -16,6 +16,7 @@ namespace Yotaka_assignment_2.Models
         public int Year { get; set; }
         public double Mileage { get; set; }
         public string EngineType { get; set; }
+        public int Speed = 0;
         private bool engineOn;
 
         //constructor
@@ -26,13 +27,10 @@ namespace Yotaka_assignment_2.Models
             this.Year = year;
             this.Mileage = mileage;
             this.EngineType = enginetype;
+            
         }
 
         //methods
-        public bool IsEngineOn()
-        {
-            return engineOn;
-        }
         public void StartEngine()
         {
             engineOn = true;
@@ -44,7 +42,7 @@ namespace Yotaka_assignment_2.Models
             engineOn = false;
             Console.WriteLine("The engine is off.");
         }
-
+        // i want it will be different from car class so i will return different message
         public string Drive()
         {
             if (engineOn)
@@ -57,9 +55,15 @@ namespace Yotaka_assignment_2.Models
             }
         }
 
+        public void Getspeed(int speed)
+        {
+            this.Speed = speed;
+            Console.WriteLine($"Motorcycle is now going at {speed} km/h.");
+        }
+
         public override string ToString()
         {
-            return $"Year : {Year} Brand : {Brand} Model :  {Model} and Engine : {EngineType}.";
+            return $"Year : {Year} Brand : {Brand} Model :  {Model} Spreed : {Speed}and Engine : {EngineType}.";
         }
     }
 }

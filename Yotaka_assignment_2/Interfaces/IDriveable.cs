@@ -11,5 +11,6 @@ namespace Yotaka_assignment_2.Interfaces
         string Drive();
         public void StartEngine();
         public void StopEngine();
+        void Getspeed(int speed);
     }
 }
