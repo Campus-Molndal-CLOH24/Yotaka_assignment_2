@@ -14,10 +14,13 @@ namespace Yotaka_assignment_2
             List<IVehicle> vehicles = new List<IVehicle>();
             {
                 vehicles.Add(new CarImpl("Toyota", "Corolla", 2020, 1700, 5, "XV-100"));
-                vehicles.Add(new MotorcycleImpl("Harley Davidson", "Sportster", 2019, 5000, "V-Twin"));
                 vehicles.Add(new CarImpl("Honda", "Civic", 2018, 2000, 4, "XV-200"));
+                vehicles.Add(new CarImpl("Tesla", "Model S", 2019, 1000, 4, "XV-300"));
+                vehicles.Add(new MotorcycleImpl("Harley Davidson", "Sportster", 2019, 5000, "V-Twin"));
                 vehicles.Add(new MotorcycleImpl("Yamaha", "R1", 2017, 3000, "V-4"));
+                vehicles.Add(new MotorcycleImpl("Kawasaki", "Ninja", 2018, 2500, "Inline-4"));
             };
+            // choose switch case to display the vehicle type , it will be more nice and clean code.
             foreach (IVehicle vehicle in vehicles)
             {
                 switch (vehicle)
@@ -27,14 +30,12 @@ namespace Yotaka_assignment_2
                         car.StartEngine();
                         car.Getspeed(100);
                         car.TrunOnRadio();
-                        Console.WriteLine(car.Drive());
                         Console.WriteLine();
                         break;
                     case MotorcycleImpl motorcycle:
-                        Console.WriteLine("This is a Motorcycle");
+                        Console.WriteLine(motorcycle.ToString());
                         motorcycle.StartEngine();
                         Console.WriteLine(motorcycle.Drive());
-                        Console.WriteLine(motorcycle.ToString());
                         Console.WriteLine();
                         break;
                     default:

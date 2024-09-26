@@ -32,16 +32,16 @@ namespace Yotaka_assignment_2.Models
         public void StartEngine()
         {
             engineOn = true;
-            Console.WriteLine("The engine is on.");
+            Console.WriteLine("The car engine is on.");
         }
         public void StopEngine()
         {
             engineOn = false;
-            Console.WriteLine("The engine is off.");
+            Console.WriteLine("The car engine is off.");
         }
         public string Drive()
         {
-            return engineOn ? "Driving...." : "Engine is off , you should start the engine.";
+            return engineOn ? "The car is Driving...." : "Engine is off , you should start the engine.";
         }
         public void TrunOnRadio()
         {
