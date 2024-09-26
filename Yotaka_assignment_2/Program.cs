@@ -13,9 +13,9 @@ namespace Yotaka_assignment_2
             //create list of vehicles
             List<IVehicle> vehicles = new List<IVehicle>();
             {
-                vehicles.Add(new CarImpl("Toyota", "Corolla", 2020, 1700, 5, "XV-100"));
-                vehicles.Add(new CarImpl("Honda", "Civic", 2018, 2000, 4, "XV-200"));
-                vehicles.Add(new CarImpl("Tesla", "Model S", 2019, 1000, 4, "XV-300"));
+                vehicles.Add(new CarImpl("Toyota", "Corolla", 2020, 1700, 5, "XV-100", 100));
+                vehicles.Add(new CarImpl("Honda", "Civic", 2018, 2000, 4, "XV-200", 200));
+                vehicles.Add(new CarImpl("Tesla", "Model S", 2019, 1000, 4, "XV-300", 150));
                 vehicles.Add(new MotorcycleImpl("Harley Davidson", "Sportster", 2019, 5000, "V-Twin"));
                 vehicles.Add(new MotorcycleImpl("Yamaha", "R1", 2017, 3000, "V-4"));
                 vehicles.Add(new MotorcycleImpl("Kawasaki", "Ninja", 2018, 2500, "Inline-4"));
@@ -28,7 +28,7 @@ namespace Yotaka_assignment_2
                     case CarImpl car:
                         Console.WriteLine(car.ToString());
                         car.StartEngine();
-                        car.Getspeed(100);
+                        car.Getspeed();
                         car.TrunOnRadio();
                         Console.WriteLine();
                         break;

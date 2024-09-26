@@ -47,7 +47,7 @@ namespace Yotaka_assignment_2.Models
         }
         public void Getspeed(int speed)
         {
-            //this.Speed = speed;
+            this.Speed = speed;
             Console.WriteLine($"Motorcycle is now going at {speed} km/h.");
         }
 

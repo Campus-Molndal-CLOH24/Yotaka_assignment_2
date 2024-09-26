@@ -15,7 +15,7 @@ namespace Yotaka_assignment_2.Factories
         public IVehicle CreateVehicle(string model, int year, double mileage)
         {
             // Assuming default values for brand, doors, and enginetype
-            return new CarImpl("DefaultBrand", model, year, mileage, 4, "DefaultEngineType");
+            return new CarImpl("DefaultBrand", model, year, mileage, 4, "DefaultEngineType",0);
         }
     }
 }

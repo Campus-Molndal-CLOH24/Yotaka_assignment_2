@@ -16,16 +16,18 @@ namespace Yotaka_assignment_2.Models
         public double Mileage { get; set; }
         public int Doors { get; set; }
         public string EngineType { get; set; }
+        int Speed { get; set; }
         private bool engineOn;
         
         //constructor
-        public CarImpl(string band, string Model, int year, double mileage, int doors, string enginetype)
+        public CarImpl(string band, string Model, int year, double mileage, int doors, string enginetype, int speed)
         {
             this.Brand = band;
             this.Model = Model;
             this.Year = year;
             this.Mileage = mileage;
             this.Doors = doors;
+            this.Speed = speed;
             this.EngineType = enginetype; 
         }
         //methods
@@ -47,9 +49,11 @@ namespace Yotaka_assignment_2.Models
         {
             Console.WriteLine(engineOn ? "The radio is on." : "Start the engine first then radio will trun on.");
         }
-        public void Getspeed(int speed)
+        public int Getspeed()
         {
-            Console.WriteLine($"The car is driving at {speed} km/h.");
+            Console.WriteLine($"The car is driving at {Speed} km/h.");
+            return this.Speed = Speed;
+                
         }
         public override string ToString()
         {
