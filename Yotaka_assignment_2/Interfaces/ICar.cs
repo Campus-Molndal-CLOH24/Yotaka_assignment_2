@@ -15,7 +15,7 @@ namespace Yotaka_assignment_2.Interfaces
         void StartEngine();
         void StopEngine();
         string Drive();
-        void TrunOnRadio(); // added new method to turn on radio specifi only car
+        void TurnOnRadio(); // added new method to turn on radio specifi only car
     }
     
 }

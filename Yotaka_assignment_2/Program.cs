@@ -35,7 +35,7 @@ namespace Yotaka_assignment_2
 
                 if (vehicle is CarImpl car)
                 {
-                    car.TrunOnRadio();
+                    car.TurnOnRadio();
                 }
                 else if (vehicle is MotorcycleImpl motorcycle)
                 {

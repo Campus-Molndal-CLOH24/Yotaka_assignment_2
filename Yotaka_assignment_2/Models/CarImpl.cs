@@ -45,7 +45,7 @@ namespace Yotaka_assignment_2.Models
         {
             return engineOn ? "The car is Driving...." : "Engine is off , you should start the engine.";
         }
-        public void TrunOnRadio()
+        public void TurnOnRadio()
         {
             Console.WriteLine(engineOn ? "The radio is on." : "Start the engine first then radio will trun on.");
         }
