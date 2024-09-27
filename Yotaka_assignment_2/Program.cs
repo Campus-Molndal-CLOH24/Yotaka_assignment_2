@@ -19,10 +19,11 @@ namespace Yotaka_assignment_2
             {
                 vehicles.Add(carfactory.CreateVehicle("Toyota", 2011, 2000));
                 vehicles.Add(carfactory.CreateVehicle("Honda", "Civic", 2018, 2000, 4, "XV-200", 200));
-                vehicles.Add(new CarImpl("Tesla", "Model S", 2019, 1000, 4, "XV-300", 150));
-                vehicles.Add(new MotorcycleImpl("Harley Davidson", "Sportster", 2019, 5000, "V-Twin"));
-                vehicles.Add(new MotorcycleImpl("Yamaha", "R1", 2017, 3000, "V-4"));
-                vehicles.Add(new MotorcycleImpl("Kawasaki", "Ninja", 2018, 2500, "Inline-4"));
+                vehicles.Add(carfactory.CreateVehicle("Tesla", "Model S", 2019, 1000, 4, "XV-300", 150));
+                vehicles.Add(motorcyclefactory.CreateVehicle("Harley Davidson", "Sportster", 2019, 5000, "V-Twin", 120));
+                vehicles.Add(motorcyclefactory.CreateVehicle("Yamaha", "R1", 2017, 3000, "V-4", 180));
+                vehicles.Add(motorcyclefactory.CreateVehicle("Kawasaki", "Ninja", 2018, 2500, "Inline-4", 200));
+                
             };
             // choose switch case to display the vehicle type , it will be more nice and clean code.
             foreach (IVehicle vehicle in vehicles)
