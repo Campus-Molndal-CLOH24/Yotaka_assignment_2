@@ -10,10 +10,7 @@ namespace Yotaka_assignment_2.Interfaces
     public interface IMotorcycle : IVehicle
     {
         string EngineType { get; set; }
-        string Brand { get; set; }
-        string Model { get; set; }
-        int Year { get; set; }
-        double Mileage { get; set; }
+        
 
         void StartEngine();
         void StopEngine();

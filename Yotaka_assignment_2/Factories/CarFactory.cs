@@ -15,7 +15,7 @@ namespace Yotaka_assignment_2.Factories
         {
             return new CarImpl("Unknown", model, year, mileage, 4, "Unknown", 0);
         }
-        // use over method to create a car becuase  it can create more properties so it prevent error when we call in car implement in program.cs
+        // use over method to create a car becuase  it can create more properties so it prevent error when we call in car implement in program.cs, and in IvechicleFactory.cs accept only 3 argements so need to overload it to accetp another argements.
         // got help from chatgpt. It gave me 2 solution to solve the problem. I choose the first solution.
         public IVehicle CreateVehicle(string brand, string model, int year, double mileage, int doors, string engineType, int speed)
         {
