@@ -24,31 +24,28 @@ namespace Yotaka_assignment_2
                 vehicles.Add(motorcyclefactory.CreateVehicle("Kawasaki", "Ninja", 2018, 2500, "Inline-4", 200));
             };
 
-            // choose switch case to display the vehicle type , it will be more nice and clean code.
             foreach (IVehicle vehicle in vehicles)
             {
-                // use tostring to display all then chosee one if is car what is going to happen and if is motorcycle what is going to happen.
-                switch (vehicle)
-                {
-                    case CarImpl car:
-                        Console.WriteLine(car.ToString());
-                        car.StartEngine();
-                        car.Getspeed();
-                        car.TrunOnRadio();
-                        Console.WriteLine();
-                        break;
-                    case MotorcycleImpl motorcycle:
-                        Console.WriteLine(motorcycle.ToString());
-                        motorcycle.StartEngine();
-                        Console.WriteLine(motorcycle.Drive());
-                        Console.WriteLine();
-                        break;
-                    default:
-                        Console.WriteLine("Invalid vehicle type");
-                        break;
-                }
+                DisplayVehicleInfo(vehicle);
             }
+            static void DisplayVehicleInfo(IVehicle vehicle)
+            {
+                Console.WriteLine(vehicle.ToString());
+                vehicle.StartEngine();
+
+                if (vehicle is CarImpl car)
+                {
+                    car.TrunOnRadio();
+                }
+                else if (vehicle is MotorcycleImpl motorcycle)
+                {
+                    motorcycle.Getspeed();
+                    motorcycle.PutOnHelmet();
+                }
+                Console.WriteLine();
+            }
+
+            
         }
     }
-    
 }

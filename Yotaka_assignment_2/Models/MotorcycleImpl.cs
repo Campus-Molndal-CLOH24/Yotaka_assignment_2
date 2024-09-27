@@ -16,17 +16,18 @@ namespace Yotaka_assignment_2.Models
         public int Year { get; set; }
         public double Mileage { get; set; }
         public string EngineType { get; set; }
-        public int Speed = 0;
+        public int Speed { get; set; }
         private bool engineOn;
 
         //constructor
-        public MotorcycleImpl(string brand, string model, int year, double mileage, string enginetype)
+        public MotorcycleImpl(string brand, string model, int year, double mileage, string enginetype, int speed)
         {
             this.Brand = brand;
             this.Model = model;
             this.Year = year;
             this.Mileage = mileage;
             this.EngineType = enginetype;
+            this.Speed = speed;
         }
 
         //methods
@@ -40,15 +41,17 @@ namespace Yotaka_assignment_2.Models
             engineOn = false;
             Console.WriteLine("The Motorcycle engine is off.");
         }
-        // i want it will be different from car class so i will return different message
         public string Drive()
         {
-            return engineOn ? "Motocycle is driving now" : "You should start engine first";
+            return engineOn ? "Motocycle is riding now" : "You should start engine first";
         }
-        public void Getspeed(int speed)
+        public void Getspeed()
         {
-            this.Speed = speed;
-            Console.WriteLine($"Motorcycle is now going at {speed} km/h.");
+            Console.WriteLine($"Motorcycle is now going at {Speed} km/h.");
+        }
+        public void PutOnHelmet()
+        {
+            Console.WriteLine("Helmet is on.");
         }
 
         public override string ToString()

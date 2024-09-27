@@ -13,12 +13,12 @@ namespace Yotaka_assignment_2.Factories
         public IVehicle CreateVehicle(string model, int year, double mileage)
         {
             // Implementing the missing method from IVehicleFactory interface
-            return new MotorcycleImpl("DefaultBrand", model, year, mileage, "DefaultEngineType");
+            return new MotorcycleImpl("DefaultBrand", model, year, mileage, "DefaultEngineType",0);
         }
         public IVehicle CreateVehicle(string brand, string model, int year, double mileage,string engineType, int speed)
         {
             // Adjusted to match the constructor of MotorcycleImpl
-            return new MotorcycleImpl(brand, model, year, mileage, engineType);
+            return new MotorcycleImpl(brand, model, year, mileage, engineType,speed);
         }
     }
 }

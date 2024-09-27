@@ -16,7 +16,7 @@ namespace Yotaka_assignment_2.Models
         public double Mileage { get; set; }
         public int Doors { get; set; }
         public string EngineType { get; set; }
-        int Speed { get; set; }
+        public int Speed { get; set; }
         private bool engineOn;
         
         //constructor
