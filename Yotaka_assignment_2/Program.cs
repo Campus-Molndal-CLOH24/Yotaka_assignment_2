@@ -10,11 +10,15 @@ namespace Yotaka_assignment_2
     {
         static void Main(string[] args)
         {
+            CarFactory carfactory = new CarFactory();
+            MotorcycleFactory motorcyclefactory = new MotorcycleFactory();
+            
+
             //create list of vehicles
             List<IVehicle> vehicles = new List<IVehicle>();
             {
-                vehicles.Add(new CarImpl("Toyota", "Corolla", 2020, 1700, 5, "XV-100", 100));
-                vehicles.Add(new CarImpl("Honda", "Civic", 2018, 2000, 4, "XV-200", 200));
+                vehicles.Add(carfactory.CreateVehicle("Toyota", 2011, 2000));
+                vehicles.Add(carfactory.CreateVehicle("Honda", "Civic", 2018, 2000, 4, "XV-200", 200));
                 vehicles.Add(new CarImpl("Tesla", "Model S", 2019, 1000, 4, "XV-300", 150));
                 vehicles.Add(new MotorcycleImpl("Harley Davidson", "Sportster", 2019, 5000, "V-Twin"));
                 vehicles.Add(new MotorcycleImpl("Yamaha", "R1", 2017, 3000, "V-4"));
@@ -23,6 +27,7 @@ namespace Yotaka_assignment_2
             // choose switch case to display the vehicle type , it will be more nice and clean code.
             foreach (IVehicle vehicle in vehicles)
             {
+                // use tostring to display all then chosee one if is car what is going to happen and if is motorcycle what is going to happen.
                 switch (vehicle)
                 { 
                     case CarImpl car:

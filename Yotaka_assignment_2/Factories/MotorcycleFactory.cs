@@ -15,7 +15,5 @@ namespace Yotaka_assignment_2.Factories
             // Implementing the missing method from IVehicleFactory interface
             return new MotorcycleImpl("DefaultBrand", model, year, mileage, "DefaultEngineType");
         }
-
-        
     }
 }

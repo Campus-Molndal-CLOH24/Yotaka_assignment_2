@@ -9,7 +9,9 @@ OBS!!! Ändra absolut inte på rubrikerna i denna fil!!!!
 ## Inledning
 
 ### Hur uppfattade du uppgiften initialt?
-
+Att man ska använda sig vad som man har läart sig i kursen för att skapa en program som visa en lista av fondon såsom bil, motocykle även kan man skap amer fondon också.
+men mesta äe att kan man använda polymorfism att overridder methos som ärva from interface klassen. Dessutom, använda desing mönster i den källkoden använda man fatory men kan man ändra till builder-interface också. 
+Målet den är att man förstår hur använda man polymorfism och desing mönster i källkoden arv också.
 --- Skriv ovanför och ta inte bort denna raden ---
 
 ## Planering och genomförande
